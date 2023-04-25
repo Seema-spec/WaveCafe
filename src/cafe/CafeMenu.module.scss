@@ -100,7 +100,7 @@
     height: 15vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
     border-right:1px solid darkgrey;
   }
   .submenu_body{
@@ -115,7 +115,7 @@
   font-size:calc(0.7vw + 0.2rem);
   color: #5e8e85;
   margin: 2px;
-  width: 45%;
+  width: 78%;
   text-align: center;
   @media all and (max-width:940px) {
     font-size: calc(0.3vw + 0.7rem);

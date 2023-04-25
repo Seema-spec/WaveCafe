@@ -34,25 +34,47 @@ export default function CafeMenu() {
       ]
     },
     {
+      menu:"Special Items",
+      icon:"fas fa-glass-martini tm-page-link-icon",
+      submenu:[
+        {
+          img: "fa-regular fa-square",
+          title:"Special One"
+        },
+        {
+          img: "fa-regular fa-square",
+          title:"Second Item"
+        },
+        {
+          img: "fa-regular fa-square",
+          title:"Third Item"
+        }
+      ]
+    },
+   
+  ];
+  const data1 = [
+   
+    {
       menu:"About Us",
       icon:"fas fa-users",
       submenu:[
         {
           img: "fa-regular fa-square",
-          title:"Cold Coffee"
+          title:"About Wave Cafe"
         },
         {
           img:"fa-regular fa-square",
-          title:"Cold Coffee"
+          title:"How we began"
         },
         {
           img:"fa-regular fa-square",
-          title:"Cold Coffee"
+          title:"How we began"
         }
       ]
     },
   ]
-  
+  console.log(data1,"----------");
  
   return (
     <div className={styles.app}>
@@ -82,8 +104,36 @@ export default function CafeMenu() {
             return(
                   <div className={styles.submenu_icon_box}>
                   <i className={data.img} style= {{ color: "#4b9185", fontSize: "calc(0.5vw + 0.5rem)" }}></i>
-                  <div></div>
                   <p className={styles.tm_submenu_name}>{data?.title}</p>
+                  </div>
+                  )
+                })}
+              </div>
+           
+           </div>
+          </div>
+          </>
+          )
+             })}
+          </div>
+
+          <div className={styles.top_first_menu}>
+          {data1?.map((data1)=>{
+            return(
+              <>
+           <div className={styles.inner_body}>
+            <div className={styles.icon_body}>
+            <i className={data1.icon} style= {{ color: "#4b9185", fontSize: "calc(1.8vw + 0.5rem)" }}></i>
+            </div>
+            <div className={styles.text_body}>
+            <h1 className={styles.tm_menu_name} onClick={() => handleClick(data1?.menu)}>{data1?.menu}</h1>
+          
+              <div className={styles.submenu_body}>
+              {data1?.submenu.map((data1)=>{
+            return(
+                  <div className={styles.submenu_icon_box}>
+                  <i className={data1.img} style= {{ color: "#4b9185", fontSize: "calc(0.5vw + 0.5rem)" }}></i>
+                  <p className={styles.tm_submenu_name}>{data1?.title}</p>
                   </div>
                   )
                 })}
