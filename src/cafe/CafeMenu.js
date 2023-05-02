@@ -131,6 +131,7 @@ export default function CafeMenu() {
               <div className={styles.submenu_body}>
               {data1?.submenu.map((data1)=>{
             return(
+
                   <div className={styles.submenu_icon_box}>
                   <i className={data1.img} style= {{ color: "#4b9185", fontSize: "calc(0.5vw + 0.5rem)" }}></i>
                   <p className={styles.tm_submenu_name}>{data1?.title}</p>
